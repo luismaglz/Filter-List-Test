@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://dpool.sharepoint.com/sites/contentTypeHub/SiteAssets/FilterList.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
+<script src="https://dpool.sharepoint.com/sites/contentTypeHub/SiteAssets/FilterList.js"></script>
+<html>
+	<div class="filter-list">
+		<div class="filter-list-title" data-bind="text:ListName"></div>
+		<div class="filters" data-bind="foreach:Fields">
+			<div class="filter">
+				<div class="filter-title" data-bind="text:Title"></div>
+				<div class="filter-inputs" data-bind="foreach:Choices">
+					<div>
+						<input type="checkbox" data-bind="checked:Selected"><span  data-bind="text:Name"></span>
+					</div>
+				</div>
+			</div>    
+		</div>
+		<table class="list-results">
+			<thead>
+				<tr data-bind="foreach:ResultFields">
+					<th data-bind="text:$data.ColumnTitle"></th>
+				</tr>
+			</thead>
+				<tbody data-bind="foreach:Items">
+					<tr data-bind="foreach:ResultFields">
+                        <!-- ko:if FieldType == 'Text' -->
+						<td data-bind="text:$parent[ResultFields.FieldName]"></td>
+                        <!-- /ko -->
+                        
+                        <!-- ko:if FieldType == 'Link' -->
+						<td><a data-bind="attr:{href:$parent[ResultFields.FieldName]},text:'View ' + FieldTitle"></a></td>                        
+                        <!-- /ko -->
+					</tr>
+				</tbody>
+			</table>
+	</div>
+</html>

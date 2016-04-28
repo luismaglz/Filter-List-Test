@@ -1,0 +1,49 @@
+
+.filter-list .filter-list-title{padding:10px 10px 10px 0;font-size:20px;font-weight:bold;background-color:#fff;color:#5B92E5;}
+.filter-list .filters{border-bottom:2px solid #659BCC;}
+.filter-list .filters .filter{display:inline-block;width:150px;margin:5px 0 0 5px;vertical-align:top;}
+.filter-list .filters .filter:first-child{margin-left:0;}
+.filter-list .filters .filter .filter-title{padding:10px;border-bottom:1px solid #000;border:0 0 1px 0;border-color:#fff;font-weight:bold;background-color:#5B92E5;color:#fff;}
+.filter-list .filters .filter .filter-inputs{display:block;padding:5px 0 5px 0;}
+.filter-list .filters .filter .filter-inputs label{display:block;padding:5px;}
+.filter-list table.list-results {border: 1px solid #fff;border-collapse: collapse;margin-top:10px;}
+.filter-list table.list-results td, th {border: 1px solid #fff;padding:10px;}
+.filter-list table.list-results th {font-size: 110%;font-weight: 600;color: #FFFFFF;background-color: #659BCC;}
+.filter-list table.list-results td:first-child {font-weight: bold;text-align: right;}
+.filter-list table.list-results tr:nth-child(even) {background-color: #e0e0e0;}
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.filter-list{font-family:'Open Sans', sans-serif;background:#151837;width:90%;margin:0 auto;padding:2em 0 6em;}
+.filter-list h1:before{content: "// ";}
+.filter-list h1{font-size:3em;color:#fefefe;  text-transform:lowercase;}
+.filter-list .wrapper{margin:3em 0;}
+.filter-list a,.filter-list a:visited,.filter-list a:hover,.filter-list a:active{-webkit-backface-visibility:hidden;backface-visibility:hidden;	position:relative;transition:0.5s color ease;text-decoration:none;color:#81b3d2;font-size:2.5em;}
+.filter-list a:hover{color:#d73444;}
+.filter-list a.before:before,.filter-list a.after:after{content: "";transition:0.5s all ease;-webkit-backface-visibility:hidden;backface-visibility:hidden;position:absolute;}
+.filter-list a.before:before{top:-0.25em;}
+.filter-list a.after:after{bottom:-0.25em;}
+.filter-list a.before:before,.filter-list a.after:after{height:5px;height:0.35rem;width:0;background:#d73444;}
+.filter-list a.first:after{left:0;}
+.filter-list a.second:after{right:0;}
+.filter-list a.third:after,.filter-list a.sixth:before,.filter-list a.sixth:after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);}
+.filter-list a.fourth:before,.filter-list a.fourth:after{left:0;}
+.filter-list a.fifth:before,.filter-list a.fifth:after{right:0;}
+.filter-list a.seventh:before{right:0;}
+.filter-list a.seventh:after{left:0;}
+.filter-list a.eigth:before{left:0;}
+.filter-list a.eigth:after{right:0;}
+.filter-list a.before:hover:before,a.after:hover:after{width:100%;}
+.filter-list .square{box-sizing:border-box;  margin-left:-0.4em;  position:relative;  font-size:2.5em;  overflow:hidden;}
+.filter-list .square a{  position:static; font-size:100%;  padding:0.2em 0.4em;}
+.filter-list .square:before,.square:after{content: "";box-sizing:border-box;transition:0.25s all ease;-webkit-backface-visibility:hidden;backface-visibility:hidden;position:absolute;width:5px;width:0.35rem;height:0; background:#d73444;}
+.filter-list .square:before{left:0;bottom:-0.2em;}
+.filter-list .square.individual:before{transition-delay:0.6s;}
+.filter-list .square:after{right:0;top:-0.2em;}
+.filter-list .square.individual:after{transition-delay:0.2s;}
+.filter-list .square a:before{left:0;  transition:0.25s all ease;}
+.filter-list .square a:after{right:0;transition:0.25s all ease;}
+.filter-list .square.individual a:after{transition:0.25s all ease 0.4s;}
+.filter-list .square:hover:before,.square:hover:after{height:calc(100% + 0.4em);}
+.filter-list .square:hover a:before,.square:hover a:after{width:100%;}
