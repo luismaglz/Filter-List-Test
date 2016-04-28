@@ -79,7 +79,7 @@ function initializeListWithFilters(){
 
 			koModel.Fields.push(field);
 		}
-	};
+	}; 
     function buildCamlQuery(){
 		var fullQuery = "";
 		var singleFieldQueries = [];
